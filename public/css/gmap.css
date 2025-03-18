@@ -1,0 +1,30 @@
+.gm-iv-address{
+    display: none !important;
+}
+
+button .gm-control-active{
+    display: none !important;
+}
+
+.map-container{
+    background: rgb(0, 0, 0);
+    padding: 5px 5px 5px 5px;
+    justify-content: center;
+}
+
+
+#map {
+    height: 300px;
+    width: 300px;
+    margin-bottom: 10px;
+    justify-content: center;
+}
+
+.map-btn-container{
+    display: flex;
+    justify-content: center;
+}
+
+.gm-fullscreen-control {
+    display: none !important;
+  }

@@ -1,0 +1,606 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Ubuntu:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Secular+One&display=swap');
+
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+
+.logo-container{
+    display: flex;
+    justify-content: center;
+}
+
+.logo-img{
+    height: 200px;
+    width: auto;
+}
+
+
+
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Quicksand", sans-serif;
+}
+
+main {
+  /* display: flex; */
+  flex-direction: row;
+  /* background-color: #fff; */
+}
+
+.side-bar {
+  display: flex;
+  flex-direction: column;
+  /* position: fixed; */
+  width: 17rem;
+  min-height: 100%;
+  background-color: #000;
+}
+
+.side-bar .logo-top {
+  padding: 1em;
+  background-color: #171619;
+}
+
+.side-bar .nav-links {
+  padding: 1em;
+  margin: 0;
+  list-style-type: none;
+}
+
+.side-bar .nav-links .nav-tab {
+  display: flex;
+  justify-content: center;
+  margin: 0.5rem 0;
+  padding: 0.5em;
+  width: 100%;
+  text-align: left;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.side-bar .nav-links .nav-tab a {
+  text-decoration: none;
+  color: white;
+}
+
+
+.side-bar .nav-links li:hover {
+  background-color: #864879;
+}
+
+.active-btn{
+  background-color: #864879;
+}
+
+.logo-top {
+  text-align: center;
+}
+
+.logo-top a {
+  color: white;
+  text-decoration: none;
+}
+
+.nav-links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main-content {
+  min-height: 100vh;
+  /* margin-left: 17rem; */
+  padding: 2rem;
+  /* width: 100%; */
+  background: url('../images/bg.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.main-content .home { 
+    /* display: flex; */
+    display: none;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    color: white;
+}
+
+.main-content .create{
+    display: flex;
+    /* display: none; */
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    color: white;
+}
+
+.main-content .join {
+  /* display: flex; */
+  display: none;  
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  color: white;
+}
+
+.card-container{
+  height: 100%;
+  width: 100%;
+  background-color: #f3f3f3;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  border-radius: 10px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.popup-container{
+  height: 70%;
+  width: 60%;
+  position: fixed;
+  z-index:99999;
+  background-color: #ffff;
+  justify-content: center;
+  margin: auto;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  border-radius: 10px;
+  /* padding-top: 50px;
+  padding-bottom: 50px; */
+  padding-right: 80px;
+  padding-left: 80px;
+  padding-top: 27px;
+}
+
+
+.card-content{
+  display: flex;
+  max-width: 100%;
+  margin: auto;
+}
+
+.card-heading-container{
+  display: flex; 
+  justify-content: center; 
+}
+
+.card-heading{
+  color: black; 
+  font-family: 'Fredoka One', cursive;
+}
+
+.input-container{
+  /* display: flex;  */
+  /* justify-content: center; */
+  padding: 10px;
+}
+
+.create-btn-container{
+  display: flex; 
+  justify-content: space-around;
+  transition: 0.2s;
+}
+
+.btn{
+  transition: 0.2s !important;
+  padding-top: 10px !important;
+  padding-bottom: 10px !important;
+  padding-right: 30px !important;
+  padding-left: 30px !important;
+  font-family: 'Fredoka One', cursive !important;
+}
+
+.btn:hover{
+  transition: 0.2s;
+  transform: scale(1.05);
+}
+
+.btn:active{
+  transition: 0.2s;
+  transform: scale(0.9);
+}
+
+.input-box{
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  font-family: 'Fredoka One', cursive;
+  color: rgb(87, 87, 87);
+  transition: 0.4s;
+  outline: none !important;
+  border: none !important;
+  /* border-color: white !important; */
+  /* border-color: rgb(46, 46, 46) !important; */
+}
+
+.input-box:focus{
+  transform: scale(1.01);
+  transition: 0.4s;
+}
+
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+  color:    #b6b6b6;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+ color:    #b6b6b6;
+ opacity:  1;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+ color:    #b6b6b6;
+ opacity:  1;
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+ color:    #b6b6b6;
+}
+::-ms-input-placeholder { /* Microsoft Edge */
+ color:    #b6b6b6;
+}
+
+::placeholder { /* Most modern browsers support this now. */
+ color:    #b6b6b6;
+}
+
+.input-box2{
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  font-family: 'Fredoka One', cursive;
+  color: rgb(87, 87, 87);
+  transition: 0.4s;
+  outline: none !important;
+  border: none !important;
+  background-color: #f3f3f3 !important;
+  /* border-color: rgb(46, 46, 46) !important; */
+}
+
+.input-box2:focus{
+  transform: scale(1.01);
+  transition: 0.4s;
+}
+
+.btn-success{
+  background-color: rgb(55, 224, 55) !important;
+  border-color: rgb(55, 224, 55) !important;
+}
+
+
+
+
+
+.card{
+  border-radius: 10px !important;
+  transition: 0.2s;
+}
+
+.card img{
+ border-top-left-radius: 5px;
+ border-top-right-radius: 5px;
+}
+
+.card p, .card a{
+  text-align: center;
+}
+
+.mode-img{
+  height: auto;
+  width: auto;
+}
+
+.mobile-bar{
+  display: none;
+  padding-right: 0 !important
+}
+
+
+
+
+
+.mode-heading{
+  color: black;
+  font-family: 'Fredoka One', cursive;
+}
+
+.mode-btn-container{
+  display: flex;
+  justify-content: center;
+}
+
+.mode-btn{
+  width: 50% !important;
+  background-color: #864879 !important;
+  border-color: #864879 !important;
+  padding-top: 5px !important;
+  padding-bottom: 5px !important;
+}
+
+
+
+.mode-card-active{
+  border-color: rgb(86, 209, 86) !important;
+  border-width: 5px !important;
+}
+
+.waitingScreen{
+  /* display: flex; */
+  display : none;
+}
+
+.waiting-list-container{
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  /* align-content: flex-start; */
+  /* margin-left: 160px !important; */
+}
+
+.waiting-list-container span{
+  font-family: 'Fredoka One', cursive;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+.card-para-container{
+  /* display: flex; */
+  justify-content: center;
+  padding: 70px;
+}
+
+.card-para-container p{
+  font-family: 'Fredoka One', cursive;
+  font-family: 'Ubuntu', sans-serif;
+  color: black;
+}
+
+.gameScreen{
+  display: none;
+}
+
+#startScreen{
+  /* display: none; */
+}
+
+.gameOuterLayer{
+  z-index: 9999;
+  position: absolute;
+  display: flex;
+}
+
+.subOuterLayer{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  width: 100%;
+  position: absolute;
+  z-index: 99999;
+  margin-left: 100%;
+}
+
+.score-card{
+  background:#000000b3;
+  padding: 15px;
+}
+
+.score-card table tr th, #playersScore table tr td{
+  color: white; 
+}
+
+tbody, td, tfoot, th, thead, tr  {
+  padding: 5px !important;
+}
+
+.dis-container{
+  display: flex;
+  justify-content: center;
+}
+
+.nextBtnContainer{
+  display: flex;  
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+#errorMessage{
+  display: none;
+}
+
+.randt{
+  background:#000000b3;
+  padding: 15px;
+}
+
+.round{
+  font-family: 'Fredoka One', cursive !important;
+}
+
+.time{
+  font-family: 'Fredoka One', cursive !important;
+}
+
+.winner{
+  /* display: flex; */
+  display: none;
+  background: white !important;
+  border-radius: 10px;
+}
+
+.winner-sect{
+  /* display: flex;
+  justify-content: center; */
+}
+
+.animate__animated.animate__zoomIn {
+  --animate-duration: 0.5s;
+}
+
+.animate__animated.animate__zoomOut {
+  --animate-duration: 0.5s;
+}
+
+.black-cover{
+  background: black;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+
+
+main .rowss{
+  margin-right: 0 !important;
+}
+
+
+
+@media screen and (max-width: 1080px){
+  .side-bar .nav-links .nav-tab a{
+    font-size: 13px;
+  }
+}
+
+@media screen and (max-width: 960px){
+  #hide-btn{
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1256px) {
+  .logo-img{
+    height: 150px;
+  }
+}
+@media screen and (max-width: 954px) {
+  .logo-img{
+    height: 100px;
+  }
+}
+
+@media (max-width: 992px) {
+  .main-content {
+    padding: 1rem !important;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  /* .mode-img {
+    height: 50px;
+    width: 50px;
+  } */
+  /* .card{
+    height: 150px;
+    width: 250px;
+  } */
+  #scoresList{
+    display: none;
+  }
+  .card-para-container{
+    padding: 50px;
+  }
+  .main-content {
+      margin-left: 0;
+  }
+  .side-bar{
+    /* display: none; */
+    flex-direction: row;
+  }
+  .side-bar .nav-links .nav-tab a{
+    font-size: 20px;
+  }
+  .nav-links{
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;
+  }
+  .mobile-bar{
+    /* display: block; */
+  }
+  .nav-container{
+    background: black;
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+  .logo-img{
+    height: 70px;
+    width: auto;
+  }
+  .ham-container{
+    padding: 20px;
+    margin-left: 10px;
+  }
+  .hamburger{
+    font-size: 35px;
+  }
+  .nav-content{
+    background: black;
+    position: absolute;
+    z-index: 99999999;
+  }
+  .nav-content ul li{
+    color: white;
+  }
+  .popup-container{
+    margin: -168px;
+    height: 80%;
+    width: 70%;
+    padding-top: 35px;
+    padding-right: 80px;
+    padding-left: 80px;
+  }
+}
+
+/* @media screen and (max-width: 1187px){
+  .mode-btn{
+    font-size: 13px !important;
+  }
+} */
+/* @media screen and (max-width: 1119px){
+  .mode-btn{
+    font-size: 10px !important;
+  }
+} */
+@media screen and (max-width: 1059px){
+  .mode-btn{
+    font-size: 15px !important;
+  }
+}
+
+@media screen and (max-width: 426px){
+  .mode-btn{
+    font-size: 10px !important;
+  }
+  .input-box{
+    font-size: small;
+  }
+}
+
+.row .side-bar{
+  padding-right: 0 !important;
+}
+
+.zink{
+  width: 50% !important;
+  background: #B83EBC;
+  padding-top: 10px !important;
+  padding-bottom: 10px !important;
+  padding-right: 50px !important;
+  padding-left: 50px !important;
+  font-family: 'Secular One', sans-serif;
+  height: 100px;
+  text-decoration: none;
+  border-radius: 20px;
+  color: #fff;
+}
+
+.zink:hover{
+  color: #fff;
+  /* background: #fff;
+  color: #B83EBC; */
+}
