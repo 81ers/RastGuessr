@@ -88,7 +88,13 @@ const hideBtn = document.getElementById('hide-btn')
 //herhangi!3d40.979907!4d28.872456!
 //bursalılavuk!3d40.21081!4d29.0094246!
 
-const worldLocs = ['<img src="bursalılavuk!3d40.21081!4d29.0094246!.jpg" style="justify-content: center; align-items: center; max-width: 500px; max-height: 500px;">','<img src="herhangi!3d40.979907!4d28.872456!.jpg" style="justify-content: center; align-items: center; max-width: 500px; max-height: 500px;">','<img src="sdf-yusuf-guney-1-1!3d40.128748!4d39.432256!.jpg" style="justify-content: center; align-items: center; max-width: 500px; max-height: 500px;">','<img src="eminusta!3d39.947421!4d32.881487mn.jpg" style="justify-content:center; align-items:center;  max-width: 500px; max-height: 500px;">'];
+const worldLocs = [
+    '<img src="bursalılavuk!3d40.21081!4d29.0094246!.jpg" style="justify-content: center; align-items: center; max-width: 500px; max-height: 500px; margin-left: 600px;">',
+    '<img src="herhangi!3d40.979907!4d28.872456!.jpg" style="justify-content: center; align-items: center; max-width: 500px; max-height: 500px; margin-left: 600px;">',
+    '<img src="sdf-yusuf-guney-1-1!3d40.128748!4d39.432256!.jpg" style="justify-content: center; align-items: center; max-width: 500px; max-height: 500px; margin-left: 600px;">',
+    '<img src="eminusta!3d39.947421!4d32.881487mn.jpg" style="justify-content: center; align-items: center; max-width: 500px; max-height: 500px; margin-left: 600px;">'
+];
+
 
 //
 
@@ -865,7 +871,7 @@ socket.on('street-display', (locIndex, Cmode) => {
     countdown()
 })
 
-socket.on('score-upd', rooms => {
+socket.on('score-   upd', rooms => {
     playersScore.innerHTML = '<tr><th>Players</th><th>Score</th></tr>';
     for(let i=0; i<rooms.length; i++){
         playersScore.innerHTML+='<tr><td style="color: white;">' + rooms[i][4] + '</td><td style="color: white;">' + rooms[i][8] + '</td></tr>'

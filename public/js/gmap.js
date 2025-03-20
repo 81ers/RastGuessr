@@ -22,7 +22,7 @@ function initMap(){
         myLatLng = { lat: 29.55320816750227, lng: -4.750033235036346 };
         zoomVal = 1;
     }else if(mode=="asia"){
-        myLatLng = { lat: 26.292966327268765, lng: 105.95316428653376    };
+        myLatLng = { lat: 26.292966327268765, lng: 105.95316428653376 };
         zoomVal = 2;
     }else if(mode=="africa"){
         myLatLng = { lat: 0.04401599461441711, lng: 25.383148861553586 };
@@ -36,13 +36,16 @@ function initMap(){
         zoomControl: false,
         streetViewControl: false,
         keyboardShortcuts: false,
+        // Set map container size here
+        width: '100%', // Make the width 100% of its parent container
+        height: '500px' // Increase height for a bigger map
     });
     function deleteMarker(markerArray) {
         for (let i = 0; i < markerArray.length; i++) {
             markerArray[i].setMap(null);
         }
         markerArray = [];
-    } 
+    }
     const handler = (api) => {
         markerArray.push(new google.maps.Marker({
             map,
@@ -52,7 +55,7 @@ function initMap(){
         document.getElementById("latitude").value = JSON.stringify(api.latLng.toJSON().lat);
         document.getElementById("longitude").value = JSON.stringify(api.latLng.toJSON().lng);
     };
-    
+
     map.addListener("click", (mapsMouseEvent) => {
         confirmPin.disabled = false;
         deleteMarker(markerArray);
@@ -73,12 +76,12 @@ function calcDistance(lat1,lat2,lon1,lon2)
     let dlon = lon2 - lon1;
     let dlat = lat2 - lat1;
     let a = Math.pow(Math.sin(dlat / 2), 2)
-    + Math.cos(lat1) * Math.cos(lat2)
-    * Math.pow(Math.sin(dlon / 2),2);
+        + Math.cos(lat1) * Math.cos(lat2)
+        * Math.pow(Math.sin(dlon / 2),2);
 
     let c = 2 * Math.asin(Math.sqrt(a));
 
-    
+
     let r = 6371;
 
     distance = c*r;
@@ -94,6 +97,9 @@ confirmPin.addEventListener('click', () => {
         zoomControl: false,
         streetViewControl: false,
         keyboardShortcuts: false,
+        // Set map container size here
+        width: '100%', // Make the width 100% of its parent container
+        height: '500px' // Increase height for a bigger map
     });
     const lineSymbol = {
         path: "M 0,-1 0,1",
@@ -107,38 +113,37 @@ confirmPin.addEventListener('click', () => {
         ],
         strokeOpacity: 0,
         icons: [
-        {
-            icon: lineSymbol,
-            offset: "0",
-            repeat: "20px",
-        },
+            {
+                icon: lineSymbol,
+                offset: "0",
+                repeat: "20px",
+            },
         ],
         map: map,
     });
-            calcDistance(document.getElementById('latitude').value,document.getElementById('destLat').value,document.getElementById('longitude').value,document.getElementById('destLong').value);
-            document.getElementById("distance").innerText = Math.round(distance).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-            socket.emit('score-inc', ({socketId, roomId, distance}));
+    calcDistance(document.getElementById('latitude').value,document.getElementById('destLat').value,document.getElementById('longitude').value,document.getElementById('destLong').value);
+    document.getElementById("distance").innerText = Math.round(distance).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 
-        deleteMarkers(markersArray);
+    deleteMarkers(markersArray);
 
-        
-        const handler = (asDestination) => {
-            markersArray.push(
-                new google.maps.Marker({
-                    map,
-                    position: asDestination ? { lat: parseFloat(document.getElementById("destLat").value), lng: parseFloat(document.getElementById("destLong").value) } : { lat: parseFloat(document.getElementById("latitude").value), lng: parseFloat(document.getElementById("longitude").value) },
-                    icon: asDestination ? "images/greenmark.png" : "images/redmark.png",
-                })
-            );
-        };
-        
-        handler(false); 
-        handler(true);
 
-        function deleteMarkers(markersArray) {
-            for (let i = 0; i < markersArray.length; i++) {
-                markersArray[i].setMap(null);
-            }
-            markersArray = [];
-        }                                         
+    const handler = (asDestination) => {
+        markersArray.push(
+            new google.maps.Marker({
+                map,
+                position: asDestination ? { lat: parseFloat(document.getElementById("destLat").value), lng: parseFloat(document.getElementById("destLong").value) } : { lat: parseFloat(document.getElementById("latitude").value), lng: parseFloat(document.getElementById("longitude").value) },
+                icon: asDestination ? "images/greenmark.png" : "images/redmark.png",
+            })
+        );
+    };
+
+    handler(false);
+    handler(true);
+
+    function deleteMarkers(markersArray) {
+        for (let i = 0; i < markersArray.length; i++) {
+            markersArray[i].setMap(null);
+        }
+        markersArray = [];
+    }
 })
