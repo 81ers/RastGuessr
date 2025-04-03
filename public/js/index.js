@@ -89,14 +89,14 @@ const hideBtn = document.getElementById('hide-btn')
 //bursalılavuk!3d40.21081!4d29.0094246!
 
 const worldLocs = [
-    '<img src="bursalılavuk!3d40.21081!4d29.0094246!.jpg" style="justify-content: center; align-items: center; max-width: 500px; max-height: 500px; margin-left: 600px;">',
-    '<img src="herhangi!3d40.979907!4d28.872456!.jpg" style="justify-content: center; align-items: center; max-width: 500px; max-height: 500px; margin-left: 600px;">',
-    '<img src="sdf-yusuf-guney-1-1!3d40.128748!4d39.432256!.jpg" style="justify-content: center; align-items: center; max-width: 500px; max-height: 500px; margin-left: 600px;">',
-    '<img src="eminusta!3d39.947421!4d32.881487mn.jpg" style="justify-content: center; align-items: center; max-width: 500px; max-height: 500px; margin-left: 600px;">'
+    '<img src="bursalılavuk!3d40.21081!4d29.0094246!.jpg" style="position:fixed; top:%10; left:%10;  width:50%; height:50%; z-index: 9998; border:none; margin:0; padding:0; overflow:hidden;">',
+    '<img src="herhangi!3d40.979907!4d28.872456!.jpg" style="position:fixed; top:%10; left:%10;  width:50%; height:50%; z-index: 9998; border:none; margin:0; padding:0; overflow:hidden;">',
+    '<img src="sdf-yusuf-guney-1-1!3d40.128748!4d39.432256!.jpg" style="position:fixed; top:%10; left:%10;  width:50%; height:50%; z-index: 9998; border:none; margin:0; padding:0; overflow:hidden;">',
+    '<img src="eminusta!3d39.947421!4d32.881487mn.jpg" style="position:fixed; top:%10; left:%10;  width:50%; height:50%; z-index: 9998; border:none; margin:0; padding:0; overflow:hidden;">'
 ];
 
 
-//
+// style="position:fixed; top:0; left:0; bottom:0; right:0; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden;"
 
 //['<iframe src="https://www.google.com/maps/place//@39.947421,32.881487,17z/data=!4m6!1m5!3m4!2zMznCsDU2JzUwLjciTiAzMsKwNTInNTMuNCJF!8m2!3d39.947421!4d32.881487?entry=ttu&g_ep=EgoyMDI1MDMxMS4wIKXMDSoASAFQAw%3D%3D" style="position:fixed; top:0; left:0; bottom:0; right:0; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden;" allowfullscreen="" loading="lazy"></iframe>', '<iframe src="https://www.google.com/maps/place/G%C3%B6lba%C5%9F%C4%B1,+Ankara/@39.7853577,32.7636748,13z/data=!3m1!4b1!4m6!3m5!1s0x14d34186cd4d979f:0x147a11a34ac6b5b8!8m2!3d39.798293!4d32.805752!16s%2Fm%2F027_51s?entry=ttu&g_ep=EgoyMDI1MDMxMS4wIKXMDSoASAFQAw%3D%3D" style="position:fixed; top:0; left:0; bottom:0; right:0; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden;" allowfullscreen="" loading="lazy"></iframe>'];
 
