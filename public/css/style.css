@@ -377,17 +377,19 @@ main {
 
 .subOuterLayer{
   display: flex;
-  justify-content: space-evenly;
-  align-items: flex-start;
+  justify-content: space-between;
+  align-items: center;
+  top: 0;
+  left: 0;
   width: 100%;
-  position: absolute;
+  position: fixed;
   z-index: 99999;
-  margin-left: 100%;
+  margin-left: 0;
 }
 
 .score-card{
   background:#000000b3;
-  padding: 15px;
+  padding: 25px;
 }
 
 .score-card table tr th, #playersScore table tr td{
@@ -415,7 +417,7 @@ tbody, td, tfoot, th, thead, tr  {
 
 .randt{
   background:#000000b3;
-  padding: 15px;
+  padding: 35px;
 }
 
 .round{
