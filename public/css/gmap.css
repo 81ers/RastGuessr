@@ -27,26 +27,26 @@ button .gm-control-active {
 }
 
 .map-btn-container {
-    display: flex;
-    justify-content: center;
-    margin-top: 10px;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
 }
 
 .gm-fullscreen-control {
     display: none !important;
 }
 
-/* New CSS for positioning the container over the map */
 .overlay-container {
-    position: absolute; /* Position the container absolutely over the map */
-    top: 0; /* Align it to the top of the map */
-    left: 0; /* Align it to the left of the map */
-    z-index: 1000; /* Ensure it stays on top of the map */
-    color: white; /* Change text color to white for visibility */
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    color: white;
 }
 
-/* Ensure buttons or other content inside the overlay stay on top */
 .overlay-container button {
-    position: relative; /* Ensure buttons are on top of other overlay content */
-    z-index: 1001; /* Button should be above everything in the overlay */
+    position: relative;
+    z-index: 1001;
 }

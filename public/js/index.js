@@ -89,10 +89,10 @@ const hideBtn = document.getElementById('hide-btn')
 //bursalılavuk!3d40.21081!4d29.0094246!
 
 const worldLocs = [
-    '<img src="bursalılavuk!3d40.21081!4d29.0094246!.jpg" style="position:fixed; top:%10; left:%10;  width:50%; height:50%; z-index: 9998; border:none; margin:0; padding:0; overflow:hidden;">',
-    '<img src="herhangi!3d40.979907!4d28.872456!.jpg" style="position:fixed; top:%10; left:%10;  width:50%; height:50%; z-index: 9998; border:none; margin:0; padding:0; overflow:hidden;">',
-    '<img src="sdf-yusuf-guney-1-1!3d40.128748!4d39.432256!.jpg" style="position:fixed; top:%10; left:%10;  width:50%; height:50%; z-index: 9998; border:none; margin:0; padding:0; overflow:hidden;">',
-    '<img src="eminusta!3d39.947421!4d32.881487mn.jpg" style="position:fixed; top:%10; left:%10;  width:50%; height:50%; z-index: 9998; border:none; margin:0; padding:0; overflow:hidden;">'
+    '<img src="bursalılavuk!3d40.21081!4d29.0094246!.jpg" style="position: fixed; top: 50%; left: 30%; transform: translate(-50%, -50%); width: 30%; height: auto; z-index: 9998; border: none; margin: 0; padding: 0; overflow: hidden;">',
+    '<img src="herhangi!3d40.979907!4d28.872456!.jpg" style="position: fixed; top: 50%; left: 30%; transform: translate(-50%, -50%); width: 30%; height: auto; z-index: 9998; border: none; margin: 0; padding: 0; overflow: hidden;">',
+    '<img src="sdf-yusuf-guney-1-1!3d40.128748!4d39.432256!.jpg" style="position: fixed; top: 50%; left: 30%; transform: translate(-50%, -50%); width: 30%; height: auto; z-index: 9998; border: none; margin: 0; padding: 0; overflow: hidden;">',
+    '<img src="eminusta!3d39.947421!4d32.881487mn.jpg" style="position: fixed; top: 50%; left: 30%; transform: translate(-50%, -50%); width: 30%; height: auto; z-index: 9998; border: none; margin: 0; padding: 0; overflow: hidden;">'
 ];
 
 
@@ -689,17 +689,16 @@ function genRandEur(){
         genRandEur();
     }
 }
-
+//
 
 confirPin.addEventListener('click', () => {
-    confirPin.innerText = 'Confirmed!';
     disDisplay.innerHTML = '<p>You are <b id="distance"></b> km out!</p>';
     confirPin.disabled = true;
+    confirPin.style.display = 'none';
     socket.emit('user-confirmed', roomId, socketId);
 })
 nextMap.addEventListener('click', () => {
     nextMap.style.display = 'none';
-    
     nextCnt++;
     if(nextCnt==parseFloat(rounds)+1){
         socket.emit('round-over', roomId);        
@@ -732,6 +731,7 @@ nextMap.addEventListener('click', () => {
             genRandAfr();
         }
     }
+    confirPin.style.display = 'block';
 })
 
 socket.on('display-error', message => {
@@ -871,7 +871,7 @@ socket.on('street-display', (locIndex, Cmode) => {
     countdown()
 })
 
-socket.on('score-   upd', rooms => {
+socket.on('score-upd', rooms => {
     playersScore.innerHTML = '<tr><th>Players</th><th>Score</th></tr>';
     for(let i=0; i<rooms.length; i++){
         playersScore.innerHTML+='<tr><td style="color: white;">' + rooms[i][4] + '</td><td style="color: white;">' + rooms[i][8] + '</td></tr>'

@@ -304,8 +304,6 @@ main {
 
 
 
-
-
 .mode-heading{
   color: black;
   font-family: 'Fredoka One', cursive;
@@ -400,9 +398,16 @@ tbody, td, tfoot, th, thead, tr  {
   padding: 5px !important;
 }
 
-.dis-container{
+.dis-container {
+  position: absolute;
   display: flex;
   justify-content: center;
+  top: 50%;
+  left: 70%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-size: 2.5rem;
+  color: #ffffff;
 }
 
 .nextBtnContainer{
