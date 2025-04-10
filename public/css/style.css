@@ -63,7 +63,7 @@ main {
   padding: 0.5em;
   width: 100%;
   text-align: left;
-  border-radius: 10px;
+  border-radius: 0px;
   cursor: pointer;
 }
 
@@ -74,11 +74,11 @@ main {
 
 
 .side-bar .nav-links li:hover {
-  background-color: #864879;
+  background-color: #a50d0d;
 }
 
 .active-btn{
-  background-color: #864879;
+  background-color: #a50d0d;
 }
 
 .logo-top {
@@ -113,7 +113,7 @@ main {
     justify-content: center;
     align-items: center;
     height: 100%;
-    color: white;
+    color: rgb(59, 59, 59);
 }
 
 .main-content .create{
@@ -137,11 +137,11 @@ main {
 .card-container{
   height: 100%;
   width: 100%;
-  background-color: #f3f3f3;
+  background-color: #2e2e2e;
   display: flex;
   justify-content: center;
   margin: auto;
-  border-radius: 10px;
+  border-radius: 0px;
   padding-top: 50px;
   padding-bottom: 50px;
 }
@@ -155,7 +155,7 @@ main {
   justify-content: center;
   margin: auto;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-  border-radius: 10px;
+  border-radius: 0px;
   /* padding-top: 50px;
   padding-bottom: 50px; */
   padding-right: 80px;
@@ -176,7 +176,7 @@ main {
 }
 
 .card-heading{
-  color: black; 
+  color: rgb(255, 255, 255); 
   font-family: 'Fredoka One', cursive;
 }
 
@@ -199,6 +199,7 @@ main {
   padding-right: 30px !important;
   padding-left: 30px !important;
   font-family: 'Fredoka One', cursive !important;
+  border-radius: 0px !important;
 }
 
 .btn:hover{
@@ -214,7 +215,7 @@ main {
 .input-box{
   width: 100%;
   padding: 10px;
-  border-radius: 10px;
+  border-radius: 0px;
   font-family: 'Fredoka One', cursive;
   color: rgb(87, 87, 87);
   transition: 0.4s;
@@ -254,7 +255,7 @@ main {
 .input-box2{
   width: 100%;
   padding: 10px;
-  border-radius: 10px;
+  border-radius: 0px;
   font-family: 'Fredoka One', cursive;
   color: rgb(87, 87, 87);
   transition: 0.4s;
@@ -279,13 +280,21 @@ main {
 
 
 .card{
-  border-radius: 10px !important;
+  border-radius: 0px !important;
+  border: 0px solid transparent !important;
+  background-color:#ff6600 !important;
   transition: 0.2s;
 }
 
 .card img{
- border-top-left-radius: 5px;
- border-top-right-radius: 5px;
+ border-top-left-radius: 0px;
+ border-top-right-radius: 0px;
+ filter: brightness(60%);
+ transition: filter 0.3s ease;
+}
+
+.card:hover img,.card.mode-card-active img {
+  filter: brightness(100%);
 }
 
 .card p, .card a{
@@ -316,16 +325,17 @@ main {
 
 .mode-btn{
   width: 50% !important;
-  background-color: #864879 !important;
-  border-color: #864879 !important;
+  background-color: #a50d0d !important;
+  border-color: #a50d0d !important;
   padding-top: 5px !important;
   padding-bottom: 5px !important;
+  border-radius: 0 !important;
 }
 
 
 
 .mode-card-active{
-  border-color: rgb(86, 209, 86) !important;
+  border-color: rgb(0, 0, 0) !important;
   border-width: 5px !important;
 }
 
@@ -437,7 +447,7 @@ tbody, td, tfoot, th, thead, tr  {
   /* display: flex; */
   display: none;
   background: white !important;
-  border-radius: 10px;
+  border-radius: 0px;
 }
 
 .winner-sect{
@@ -533,6 +543,7 @@ main .rowss{
     background: black;
     padding-top: 15px;
     padding-bottom: 15px;
+    border-radius: 0 !important;
   }
   .logo-img{
     height: 70px;
@@ -560,6 +571,7 @@ main .rowss{
     padding-top: 35px;
     padding-right: 80px;
     padding-left: 80px;
+    border-radius: 0 !important;
   }
 }
 
@@ -594,7 +606,7 @@ main .rowss{
 
 .zink{
   width: 50% !important;
-  background: #B83EBC;
+  background: #3ebc81;
   padding-top: 10px !important;
   padding-bottom: 10px !important;
   padding-right: 50px !important;
@@ -602,7 +614,7 @@ main .rowss{
   font-family: 'Secular One', sans-serif;
   height: 100px;
   text-decoration: none;
-  border-radius: 20px;
+  border-radius: 0px;
   color: #fff;
 }
 

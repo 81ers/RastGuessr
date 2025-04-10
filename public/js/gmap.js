@@ -8,39 +8,39 @@ function initMap() {
     let zoomVal;
 
     switch (mode) {
-        case "middleeast":
+        case "lugaya":
             myLatLng = { lat: 24.79360866539293, lng: 42.63691120388848 };
             zoomVal = 3;
             break;
-        case "europe":
+        case "zart":
             myLatLng = { lat: 46.37166748852439, lng: 14.916301179034187 };
             zoomVal = 3;
             break;
-        case "northamerica":
+        case "dumenden":
             myLatLng = { lat: 45.99077953053835, lng: -105.33510075773074 };
             zoomVal = 2;
             break;
-        case "southamerica":
+        case "laga":
             myLatLng = { lat: -23.18894341606518, lng: -58.82929816801125 };
             zoomVal = 2;
             break;
-        case "australia":
+        case "saksuka":
             myLatLng = { lat: -24.15487320484811, lng: 134.5638389324763 };
             zoomVal = 2;
             break;
-        case "world":
+        case "rastgele":
             myLatLng = { lat: 46.37166748852439, lng: 14.916301179034187 };
             zoomVal = 8;
             break;
-        case "famous":
+        case "dalgadan":
             myLatLng = { lat: 29.55320816750227, lng: -4.750033235036346 };
             zoomVal = 1;
             break;
-        case "asia":
+        case "zorttri":
             myLatLng = { lat: 26.292966327268765, lng: 105.95316428653376 };
             zoomVal = 2;
             break;
-        case "africa":
+        case "sakada":
             myLatLng = { lat: 0.04401599461441711, lng: 25.383148861553586 };
             zoomVal = 2;
             break;
@@ -54,7 +54,7 @@ function initMap() {
         center: myLatLng,
         mapTypeControl: false,
         zoomControl: false,
-        streetViewControl: false,
+        gorselVControl: false,
         keyboardShortcuts: false,
         width: '100%',
         height: '500px'
@@ -64,7 +64,7 @@ function initMap() {
         confirmPin.disabled = false;
         deleteMarkers();
         const latLng = mapsMouseEvent.latLng.toJSON();
-        addMarker(latLng.lat, latLng.lng, "images/redmark.png");
+        addMarker(latLng.lat, latLng.lng, "images/kırmızıiğne.png");
         document.getElementById("latitude").value = latLng.lat;
         document.getElementById("longitude").value = latLng.lng;
     });
@@ -140,6 +140,6 @@ confirmPin.addEventListener('click', () => {
 
     deleteMarkers();
 
-    addMarker(originLat, originLng, "images/redmark.png");
-    addMarker(destLat, destLng, "images/greenmark.png");
+    addMarker(originLat, originLng, "images/kırmızıiğne.png");
+    addMarker(destLat, destLng, "images/yeşiliğne.png");
 });

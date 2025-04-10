@@ -47,7 +47,7 @@ io.on('connection', socket => {
             const message = "Room ID cannot exceed 30 letters"
             socket.emit('display-error', message)
         }
-        // else if(mode!='world' || mode!='famous' || mode!='northamerica' || mode!='southamerica' || mode!='middleeast' || mode!='asia' || mode!='africa' || mode!='europe' || mode!='australia' || isNum(mode)){
+        // else if(mode!='rastgele' || mode!='dalgadan' || mode!='dumenden' || mode!='laga' || mode!='lugaya' || mode!='zorttri' || mode!='sakada' || mode!='zart' || mode!='saksuka' || isNum(mode)){
         //     console.log(mode)
         //     const message = "No such mode exists"
         //     socket.emit('display-error', message)
@@ -142,7 +142,7 @@ io.on('connection', socket => {
         io.to(roomId).emit('game-display', rooms[roomId])
         socket.emit('click-next');
     })
-    socket.on('display-street', ({roomId, locIndex}) => {
+    socket.on('display-gorsel', ({roomId, locIndex}) => {
         for(let i=0;i<rooms[roomId].length; i++){
             rooms[roomId][i][11] = false;
         }
@@ -150,7 +150,7 @@ io.on('connection', socket => {
         for(let i=0;i<rooms[roomId].length; i++){
             rooms[roomId][i][9] = 1;
         }
-        io.to(roomId).emit('street-display', locIndex, Cmode)
+        io.to(roomId).emit('gorsel-display', locIndex, Cmode)
     })
     socket.on('score-inc', ({socketId, roomId, distance}) => {
         let scoreIndex = '';
