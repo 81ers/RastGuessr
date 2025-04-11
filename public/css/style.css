@@ -39,15 +39,14 @@ main {
 .side-bar {
   display: flex;
   flex-direction: column;
-  /* position: fixed; */
   width: 17rem;
   min-height: 100%;
-  background-color: #000;
+  background-color: #31060600;
 }
 
 .side-bar .logo-top {
   padding: 1em;
-  background-color: #171619;
+  background-color: #00000000;
 }
 
 .side-bar .nav-links {
@@ -96,16 +95,7 @@ main {
   align-items: center;
 }
 
-.main-content {
-  min-height: 100vh;
-  /* margin-left: 17rem; */
-  padding: 2rem;
-  /* width: 100%; */
-  background: url('../images/bg.jpg');
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-}
+
 
 .main-content .home { 
     /* display: flex; */
@@ -137,7 +127,7 @@ main {
 .card-container{
   height: 100%;
   width: 100%;
-  background-color: #2e2e2e;
+  background-color: #2e2e2e00;
   display: flex;
   justify-content: center;
   margin: auto;
@@ -176,7 +166,7 @@ main {
 }
 
 .card-heading{
-  color: rgb(255, 255, 255); 
+  color: rgb(0, 0, 0); 
   font-family: 'Fredoka One', cursive;
 }
 
@@ -213,15 +203,17 @@ main {
 }
 
 .input-box{
-  width: 100%;
+  width: 30%;
   padding: 10px;
   border-radius: 0px;
+  margin: 0 auto;
+  display: block;
   font-family: 'Fredoka One', cursive;
-  color: rgb(87, 87, 87);
+  color: rgb(0, 0, 0);
   transition: 0.4s;
   outline: none !important;
   border: none !important;
-  /* border-color: white !important; */
+  background-color: #00000081 !important;
   /* border-color: rgb(46, 46, 46) !important; */
 }
 
@@ -253,15 +245,17 @@ main {
 }
 
 .input-box2{
-  width: 100%;
+  width: 30%;
   padding: 10px;
   border-radius: 0px;
+  margin: 0 auto;
+  display: block;
   font-family: 'Fredoka One', cursive;
-  color: rgb(87, 87, 87);
+  color: rgb(0, 0, 0);
   transition: 0.4s;
   outline: none !important;
   border: none !important;
-  background-color: #f3f3f3 !important;
+  background-color: #00000081 !important;
   /* border-color: rgb(46, 46, 46) !important; */
 }
 
@@ -603,6 +597,16 @@ main .rowss{
 .row .side-bar{
   padding-right: 0 !important;
 }
+
+.rowss {
+  display: flex;
+  min-height: 100vh;
+  background: url('../images/bg.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
 
 .zink{
   width: 50% !important;
